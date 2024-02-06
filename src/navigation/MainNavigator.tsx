@@ -6,14 +6,22 @@ import { HomeScreen } from "../screens/HomeScreen";
 import { FeedbackScreen } from "../screens/FeedbackScreen";
 import { Labels } from "../constants/Labels";
 import { PaperBottomTabBar } from "./bottom_tab_bar/PaperBottomTabBar";
+import { useTheme } from "react-native-paper";
+import { NavigationHeader } from "./header/NavigationHeader";
+
 const Tab = createBottomTabNavigator();
 
 export function MainNavigator() {
+  const theme = useTheme();
+
   return (
     <Tab.Navigator
-      screenOptions={{}}
       tabBar={PaperBottomTabBar}
       initialRouteName={RouteName.HOME}
+      screenOptions={{
+        header: NavigationHeader,
+      }}
+      sceneContainerStyle={{ backgroundColor: theme.colors.background }}
     >
       <Tab.Screen
         name={RouteName.HOME}
