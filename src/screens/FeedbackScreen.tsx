@@ -1,6 +1,12 @@
 import React from "react";
-import { Text } from "react-native-paper";
+import { WebView } from "react-native-webview";
 
 export function FeedbackScreen() {
-  return <Text>Feedback!</Text>;
+  return (
+    <WebView
+      source={{
+        uri: "https://www.dicionarioinformal.com.br/teste+da+farinha/",
+      }}
+    />
+  );
 }
