@@ -3,7 +3,7 @@ import IonIcon from "react-native-vector-icons/Ionicons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RouteName } from "../constants/RouteName";
 import { HomeScreen } from "../screens/HomeScreen";
-import { FeedbackScreen } from "../screens/FeedbackScreen";
+import { FeedbackScreen } from "../screens/FeedbackScreen/FeedbackScreen";
 import { Labels } from "../constants/Labels";
 import { PaperBottomTabBar } from "./bottom_tab_bar/PaperBottomTabBar";
 import { useTheme } from "react-native-paper";
