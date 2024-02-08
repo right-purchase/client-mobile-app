@@ -4,4 +4,7 @@ export const Labels = {
   SHARE: "Compartilhar",
   QUERY: "Consultar",
   RIGHT_PURCHASE: "Compra certa",
+  ERROR: "Erro",
+  PLEASE_CONTACT:
+    "Entre em contato enviando um e-mail para: right-purchase@outlook.com",
 };
