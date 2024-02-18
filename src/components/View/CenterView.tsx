@@ -3,10 +3,15 @@ import { StyleSheet, View } from "react-native";
 
 type TProps = {
   children?: React.ReactNode;
+  collapsable?: boolean;
 };
 
-export function CenterView({ children }: TProps) {
-  return <View style={styles.container}>{children}</View>;
+export function CenterView({ children, collapsable }: TProps) {
+  return (
+    <View style={styles.container} collapsable={collapsable}>
+      {children}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

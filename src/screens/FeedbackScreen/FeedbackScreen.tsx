@@ -10,21 +10,18 @@ import { Labels } from "../../constants/Labels";
 export function FeedbackScreen() {
   const { data, error, isError, isLoading } = useFeedbackUrlQuery();
 
-  let result = <></>;
-
-  if (isLoading) {
-    result = <ActivityIndicator size="large" />;
-  } else if (isError) {
-    result = (
-      <ErrorComponent
-        error={`${error?.message ?? ERROR_MESSAGE.SERVICE_OUT}\r\n${
-          Labels.PLEASE_CONTACT
-        }`}
-      />
-    );
-  } else if (data) {
-    result = <WebView source={{ uri: data }} />;
-  }
-
-  return <CenterView>{result}</CenterView>;
+  return (
+    <WebView source={{ uri: data ?? "" }}>
+      <CenterView collapsable={false}>
+        {isLoading && <ActivityIndicator size="large" />}
+        {isError && (
+          <ErrorComponent
+            error={`${error?.message ?? ERROR_MESSAGE.SERVICE_OUT}\r\n${
+              Labels.PLEASE_CONTACT
+            }`}
+          />
+        )}
+      </CenterView>
+    </WebView>
+  );
 }
