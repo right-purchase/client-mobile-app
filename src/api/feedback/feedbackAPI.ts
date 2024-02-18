@@ -9,7 +9,7 @@ export const feedbackApi = axios.create({
 
 export async function getFeedbackURLAsync(): Promise<string> {
   try {
-    const response = await feedbackApi.get("/feedback/url");
+    const response = await feedbackApi.get("/feedback/form/url");
     return feedbackUrlResponseSchema.parse(response.data).value;
   } catch (error) {
     throw AppError.from(error);
