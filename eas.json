@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 7.2.0"
+    "version": ">= 7.2.0",
+    "appVersionSource": "local"
   },
   "build": {
     "development": {
@@ -8,9 +9,19 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://138.197.62.66"
+      },
+      "android": {
+        "buildType": "apk"
+      }
     },
-    "production": {}
+    "production": {
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://138.197.62.66"
+      }
+    }
   },
   "submit": {
     "production": {}

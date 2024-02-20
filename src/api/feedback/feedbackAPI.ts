@@ -1,10 +1,9 @@
-import { API_URL } from "@env";
 import axios from "axios";
 import { feedbackUrlResponseSchema } from "./feedbackSchema";
 import { AppError } from "../../error/AppError";
 
 export const feedbackApi = axios.create({
-  baseURL: API_URL,
+  baseURL: process.env.EXPO_PUBLIC_API_URL,
 });
 
 export async function getFeedbackURLAsync(): Promise<string> {
