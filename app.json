@@ -2,7 +2,7 @@
   "expo": {
     "name": "Compra Certa",
     "slug": "client-mobile-app",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "src/assets/icon.png",
     "userInterfaceStyle": "light",
@@ -11,17 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "src/assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
+      "versionCode": 6,
       "package": "com.rightpurchase.clientmobileapp"
     },
     "web": {
@@ -31,6 +26,16 @@
       "eas": {
         "projectId": "970da296-98d5-4660-a272-6845b2b3ab1a"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true
+          }
+        }
+      ]
+    ]
   }
 }

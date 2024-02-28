@@ -1,15 +1,16 @@
 import React from "react";
-import { View } from "react-native";
 import { DefaultTheme, withTheme } from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const ThemeNavigationHedaer = withTheme(
   ({ theme }: { theme: typeof DefaultTheme }) => (
-    <View
+    <SafeAreaView
       style={{
-        height: 50,
         backgroundColor: theme.colors.outlineVariant,
       }}
-    ></View>
+    >
+      <></>
+    </SafeAreaView>
   )
 );
 
